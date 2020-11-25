@@ -19,5 +19,5 @@ jobs:
       shell: bash
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: dotnet run --configuration Release -- deploy
+      run: dotnet run --configuration Release -- deploy -l Debug
         
