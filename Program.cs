@@ -15,6 +15,7 @@ namespace Docs
                 .AddSetting(Keys.LinkRoot, "/spectre.console.jp")
                 .AddSetting(Keys.LinksUseHttps, true)
                 .AddSetting(Constants.EditLink, ConfigureEditLink())
+                .AddSetting("ValidateRelativeLinks",false )
                 .ConfigureSite("spectresystems", "spectre.console.jp", "main")
                 .ConfigureDeployment(deployBranch: "docs")
                 .AddShortcode("Children", typeof(ChildrenShortcode))
