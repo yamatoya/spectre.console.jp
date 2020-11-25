@@ -1,4 +1,4 @@
-﻿using Statiq.Common;
+using Statiq.Common;
 using Statiq.Core;
 using Statiq.Web.GitHub;
 
@@ -14,7 +14,7 @@ namespace Docs.Pipelines
                 new DeployGitHubPages(
                     Config.FromSetting<string>(Constants.Site.Owner),
                     Config.FromSetting<string>(Constants.Site.Repository),
-                    Config.FromSetting<string>(Constants.Deployment.GitHubToken))
+                    "8716ca8c9f915797196ef33cbfad80e19493dce8")
                         .ToBranch(Config.FromSetting<string>(Constants.Deployment.TargetBranch))
             };
         }
