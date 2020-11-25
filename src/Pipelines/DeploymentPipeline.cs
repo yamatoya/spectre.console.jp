@@ -14,7 +14,7 @@ namespace Docs.Pipelines
                 new DeployGitHubPages(
                     Config.FromSetting<string>(Constants.Site.Owner),
                     Config.FromSetting<string>(Constants.Site.Repository),
-                    "8716ca8c9f915797196ef33cbfad80e19493dce8")
+                    Config.FromSetting<string>(Constants.Deployment.GitHubToken))
                         .ToBranch(Config.FromSetting<string>(Constants.Deployment.TargetBranch))
             };
         }
