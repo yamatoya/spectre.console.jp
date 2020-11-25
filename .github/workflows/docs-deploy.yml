@@ -1,0 +1,23 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Deploy
+    runs-on: windows-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.100
+    - name: Publish
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet run --configuration Release -- deploy
+        
