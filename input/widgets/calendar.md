@@ -1,13 +1,13 @@
 ﻿Title: Calendar
-Order: 4
+Order: 2
 RedirectFrom: calendar
 ---
 
-The `Calendar` is used to render a calendar to the terminal.
+`Calendar` はターミナルにカレンダーを描画するのに使用できます。
 
-# Usage
+# 使用方法
 
-To render a calendar, create a `Calendar` instance with a target date.
+カレンダーを描画するために、対象日を指定して `Calendar` インスタンスを作成します。
 
 ```csharp
 var calendar = new Calendar(2020,10);
@@ -28,9 +28,9 @@ AnsiConsole.Render(calendar);
 └─────┴─────┴─────┴─────┴─────┴─────┴─────┘
 ```
 
-## Culture
+## 言語
 
-You can set the calendar's culture to show localized weekdays.
+ローカライズされた曜日を表示するために、カレンダーの言語を設定できます。
 
 ```csharp
 var calendar = new Calendar(2020,10);
@@ -52,9 +52,9 @@ AnsiConsole.Render(calendar);
 └─────┴─────┴─────┴─────┴─────┴─────┴─────┘
 ```
 
-## Header
+## ヘッダー
 
-You can hide the calendar header.
+カレンダーヘッダーを非表示にできます。
 
 ```csharp
 var calendar = new Calendar(2020,10);
@@ -75,7 +75,7 @@ AnsiConsole.Render(calendar);
 └─────┴─────┴─────┴─────┴─────┴─────┴─────┘
 ```
 
-You can set the header style of the calendar.
+カレンダーのヘッダーのスタイルを設定できます。
 
 ```csharp
 var calendar = new Calendar(2020, 10);
@@ -84,10 +84,10 @@ AnsiConsole.Render(calendar);
 ```
 
 
-## Calendar Events
+## カレンダーイベント
 
-You can add an event to the calendar.
-If a date has an event associated with it, the date gets highlighted in the calendar.
+カレンダーにイベントを追加できます。
+その日にイベントが設定されていると、カレンダーで日付がハイライトされます。
 
 ```csharp
 var calendar = new Calendar(2020,10);
@@ -109,9 +109,9 @@ AnsiConsole.Render(calendar);
 └─────┴─────┴─────┴─────┴─────┴─────┴─────┘
 ```
 
-### Highlight style
+### ハイライトのスタイル
 
-You can set the highlight style for a calendar event via `SetHighlightStyle`.
+`SetHighlightStyle`経由で、カレンダーイベントのハイライトスタイルを設定できます。
 
 ```csharp
 var calendar = new Calendar(2020, 10);
